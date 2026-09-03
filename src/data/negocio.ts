@@ -21,7 +21,7 @@ export const servicios = [
   {
     numero: "03",
     titulo: "Bodas",
-    descripcion: "El día más fotografiado de tu vida merece un maquillaje natural que potencie tu belleza. Duradero para la ceremonia, el baile y las lágrimas. Favorecedor bajo cualquier luz. Y tuyo — no el de todas las novias, el tuyo."
+    descripcion: "El día más fotografiado de tu vida merece un maquillaje que potencie tu belleza natural. Duradero para la ceremonia, el baile y las lágrimas. Favorecedor bajo cualquier luz. Y tuyo — no el de todas las novias, el tuyo."
   },
   {
     numero: "04",
