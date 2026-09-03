@@ -3,29 +3,29 @@ export const negocio = {
   profesion: "Makeup Artist",
   ciudad: "Gijón · Asturias",
   instagram: "https://www.instagram.com/makeuppatti",
-  whatsapp: "34XXXXXXXXX", // pendiente confirmar número
+  whatsapp: "34691352577",
   whatsappTexto: "Hola Patricia, me gustaría reservar una cita contigo.",
 };
 
 export const servicios = [
   {
     numero: "01",
-    titulo: "Tu mejor versión de siempre",
-    descripcion: "Para el día a día, la reunión importante, la comida del domingo. Maquillaje que potencia lo que ya tienes sin que parezca que llevas maquillaje. Duradero, favorecedor, tuyo."
+    titulo: "Bodas",
+    descripcion: "El día más fotografiado de tu vida merece el maquillaje más pensado. Duradero para la ceremonia, el baile y las lágrimas. Favorecedor bajo cualquier luz. Y tuyo — no el de todas las novias, el tuyo."
   },
   {
     numero: "02",
-    titulo: "La noche que se recuerda",
-    descripcion: "Fiesta, evento, esa ocasión especial. El look que aguanta hasta las seis de la mañana y sigue siendo tuyo. Intenso o sutil — pero siempre intencionado."
+    titulo: "Noche y fiesta",
+    descripcion: "El look que aguanta desde que sales hasta que vuelves. Sin retoques, sin sorpresas, sin que a medianoche ya no quede nada. Intenso cuando quieres, sutil cuando lo prefieres — pero siempre intencionado."
   },
   {
     numero: "03",
-    titulo: "Sesiones y editorial",
-    descripcion: "Para fotógrafos, modelos, marcas. El maquillaje que la cámara no perdona — y que Patricia sabe hacer exactamente como la cámara lo necesita."
+    titulo: "Shootings, marcas y pasarela",
+    descripcion: "Ha trabajado para marcas como Siroko, en sesiones fotográficas y pases de moda. El maquillaje que la cámara, el foco y el fotógrafo exigen es completamente distinto al de todos los días. Patricia lo sabe porque lo ha hecho."
   },
   {
     numero: "04",
-    titulo: "Transformación y artístico",
-    descripcion: "Halloween, personajes, efectos especiales, looks de editorial arriesgados. Si tienes una idea y no sabes si es posible, probablemente sí lo es."
+    titulo: "Maquillaje artístico y transformación",
+    descripcion: "Personajes, Halloween, efectos especiales, looks de editorial que no tienen límite. Si tienes una idea en la cabeza — aunque no sepas si es posible — probablemente sí lo es. Esta es la parte favorita de Patricia."
   },
 ];
