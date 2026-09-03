@@ -82,22 +82,7 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
       </a>
     </div>
 
-    <!-- SECCIÓN 2 — GALERÍA CORTA -->
-    <section class="galeria-corta bg-negro">
-      <div class="container-fluid">
-        <div class="galeria-corta-grid">
-          <div class="galeria-corta-item">
-            <img src="/galeria8.jpg" alt="Maquillaje Patricia Mayo 1" loading="lazy" />
-          </div>
-          <div class="galeria-corta-item">
-            <img src="/galeria1.jpg" alt="Maquillaje Patricia Mayo 2" loading="lazy" />
-          </div>
-          <div class="galeria-corta-item">
-            <img src="/galeria6.jpg" alt="Maquillaje Patricia Mayo 3" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- SECCIÓN 4 — SERVICIOS -->
     <section id="servicios" class="servicios-section bg-crema">
@@ -130,24 +115,11 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
       <div class="container">
         <h2 class="galeria-titulo-principal">Galería</h2>
 
-        <div class="galeria-grid-2col">
-          <div class="galeria-img-wrap">
-            <img src="/galeria7.jpg" alt="Trabajo Maquillaje 1" loading="lazy" />
-          </div>
-          <div class="galeria-img-wrap">
-            <img src="/galeria4.jpg" alt="Trabajo Maquillaje 2" loading="lazy" />
-          </div>
-        </div>
-
-        <div class="galeria-footer-link">
-          <a 
-            href="https://www.behance.net/2a1edc00?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAUGj_5wZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABpzSFYuSSOJcwfZfmb4vjWLz58LQr5mFua_7aiqzAltxN7q1t8PYRWABMgyBD_aem_ZUC-SLi8TXebbGpMeeDGCQ" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="link-instagram"
-          >
-            Ver más en Behance &rarr;
-          </a>
+        <div class="galeria-pendiente-box">
+          <p class="galeria-pendiente-texto">
+            Pendiente de que Doña Patty me las pase.
+          </p>
+          <span class="galeria-pendiente-sub">Próximamente nueva selección de fotografías</span>
         </div>
       </div>
     </section>
@@ -645,48 +617,33 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     font-weight: 500;
   }
 
-  .galeria-grid-2col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .galeria-img-wrap {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    background-color: #1a1a1a;
-  }
-
-  .galeria-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    transition: transform 0.6s ease;
-  }
-
-  .galeria-img-wrap:hover img {
-    transform: scale(1.04);
-  }
-
-  .galeria-footer-link {
+  .galeria-pendiente-box {
+    border: 1px dashed rgba(224, 118, 77, 0.4);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    padding: 5rem 2rem;
     text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
   }
 
-  .link-instagram {
+  .galeria-pendiente-texto {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
     color: var(--color-crema);
-    text-decoration: none;
-    display: inline-block;
-    transition: color 0.25s ease, transform 0.25s ease;
+    line-height: 1.3;
+    margin-bottom: 0.85rem;
+    font-weight: 400;
   }
 
-  .link-instagram:hover {
+  .galeria-pendiente-sub {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     color: var(--color-terracota);
-    transform: translateX(4px);
+    opacity: 0.85;
+    display: block;
   }
 
   /* SECCIÓN 6 — SOBRE PATRICIA */
