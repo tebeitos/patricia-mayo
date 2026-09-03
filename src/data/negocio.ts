@@ -10,8 +10,8 @@ export const negocio = {
 export const servicios = [
   {
     numero: "01",
-    titulo: "Bodas",
-    descripcion: "El día más fotografiado de tu vida merece un maquillaje natural que potencie tu belleza. Duradero para la ceremonia, el baile y las lágrimas. Favorecedor bajo cualquier luz. Y tuyo — no el de todas las novias, el tuyo."
+    titulo: "Shootings, marcas y pasarela",
+    descripcion: "Ha trabajado para marcas como Siroko, en sesiones fotográficas y pases de moda. El maquillaje que la cámara, el foco y el fotógrafo exigen es completamente distinto al de todos los días."
   },
   {
     numero: "02",
@@ -20,8 +20,8 @@ export const servicios = [
   },
   {
     numero: "03",
-    titulo: "Shootings, marcas y pasarela",
-    descripcion: "Ha trabajado para marcas como Siroko, en sesiones fotográficas y pases de moda. El maquillaje que la cámara, el foco y el fotógrafo exigen es completamente distinto al de todos los días."
+    titulo: "Bodas",
+    descripcion: "El día más fotografiado de tu vida merece un maquillaje natural que potencie tu belleza. Duradero para la ceremonia, el baile y las lágrimas. Favorecedor bajo cualquier luz. Y tuyo — no el de todas las novias, el tuyo."
   },
   {
     numero: "04",
