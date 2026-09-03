@@ -142,7 +142,7 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     </section>
 
     <!-- SECCIÓN 7 — RESERVAR -->
-    <section id="reservar" class="reservar-section bg-negro">
+    <section id="reservar" class="reservar-section bg-crema">
       <div class="container reservar-container">
         <h2 class="reservar-titulo">¿Tienes una fecha en mente?</h2>
         <p class="reservar-subtitulo">
@@ -734,14 +734,14 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
   .reservar-titulo {
     font-family: var(--font-serif);
     font-size: clamp(2.5rem, 4.5vw, 3.75rem);
-    color: var(--color-crema);
+    color: var(--color-grafito);
     margin-bottom: 1.25rem;
   }
 
   .reservar-subtitulo {
     font-family: var(--font-sans);
     font-size: 1.25rem;
-    color: var(--color-crema);
+    color: var(--color-grafito);
     opacity: 0.85;
     line-height: 1.6;
     margin-bottom: 2rem;
@@ -765,9 +765,9 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.08);
-    color: var(--color-crema);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: transparent;
+    color: var(--color-grafito);
+    border: 1px solid rgba(45, 45, 45, 0.4);
     padding: 1.25rem 2.5rem;
     border-radius: 2px;
     font-family: var(--font-sans);
@@ -779,10 +779,11 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
   }
 
   .btn-email-reservar:hover {
-    background-color: rgba(255, 255, 255, 0.18);
-    border-color: var(--color-crema);
+    background-color: var(--color-grafito);
+    color: var(--color-crema);
+    border-color: var(--color-grafito);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(45, 45, 45, 0.2);
   }
 
   /* FOOTER */
