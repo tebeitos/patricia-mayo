@@ -244,21 +244,22 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
 </script>
 
 <style>
-  /* Header blanco superior optimizado para móvil */
+  /* Header transparente integrado dentro de la foto */
   .site-header {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    padding: 8px 0;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 1.5rem 0;
+    background: transparent;
+    border-bottom: none;
   }
 
   .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 32px;
   }
 
   .logo-link {
@@ -267,29 +268,30 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
   }
 
   .logo-img {
-    height: 28px; /* Tamaño idóneo en móvil para máxima legibilidad */
+    height: 28px;
     width: auto;
     object-fit: contain;
     display: block;
+    filter: brightness(0) invert(1); /* Pasa el logo a crema/blanco sobre la foto */
   }
 
-  /* Menú Hamburguesa en móvil */
+  /* Menú Hamburguesa en crema sobre la foto */
   .menu-toggle {
     background: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 6px;
+    gap: 6px;
+    padding: 8px;
     z-index: 110;
   }
 
   .hamburger-line {
     display: block;
-    width: 24px;
+    width: 26px;
     height: 2px;
-    background-color: var(--color-negro);
+    background-color: var(--color-crema);
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
@@ -351,8 +353,8 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
   .hero-section {
     position: relative;
     width: 100%;
-    height: calc(100vh - 48px);
-    min-height: 580px;
+    height: 100vh;
+    min-height: 650px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
