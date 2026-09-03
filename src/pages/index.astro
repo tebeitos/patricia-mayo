@@ -250,6 +250,14 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     object-fit: contain;
     display: block;
     filter: brightness(0) invert(1); /* Pasa el logo a crema/blanco sobre la foto */
+    transition: height 0.3s ease;
+  }
+
+  @media (min-width: 769px) {
+    .logo-img {
+      height: 38px;
+      max-width: 240px;
+    }
   }
 
   /* Menú Hamburguesa en crema sobre la foto */

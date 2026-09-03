@@ -84,6 +84,14 @@ import { negocio } from '../data/negocio';
     object-fit: contain;
     display: block;
     filter: brightness(0) invert(1);
+    transition: height 0.3s ease;
+  }
+
+  @media (min-width: 769px) {
+    .logo-img {
+      height: 38px;
+      max-width: 240px;
+    }
   }
 
   .legal-content {
