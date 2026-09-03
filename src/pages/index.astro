@@ -37,23 +37,9 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
 
   <main>
     <!-- SECCIÓN 1 — HERO -->
-    <section id="inicio" class="hero">
-      <img src="/hero.jpg" alt="Patricia Mayo Makeup Artist" />
-      <div class="hero-contenido">
-        <h1>
-          Tú pones la noche.<br/>
-          Yo pongo el resto.<br/>
-          <span class="hero-subtitulo">Y si prefieres la mañana, también.</span>
-        </h1>
-        <div class="hero-botones">
-          <a href="https://wa.me/34691352577" target="_blank" rel="noopener noreferrer" class="btn-hero btn-whatsapp">
-            WhatsApp
-          </a>
-          <a href="mailto:makeuppatti@gmail.com" class="btn-hero btn-email">
-            Email
-          </a>
-        </div>
-      </div>
+    <section id="inicio" class="hero bg-negro">
+      <img src="/hero.jpg" alt="Patricia Mayo Makeup Artist" class="hero-img" />
+      <div class="hero-overlay"></div>
     </section>
 
     <!-- SECCIÓN 3 — FRASE DE CLIENTA -->
@@ -355,15 +341,12 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     height: 100vh;
     min-height: 650px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     overflow: hidden;
     background-color: var(--color-negro);
-    text-align: center;
-    padding: 0 1.5rem;
   }
 
-  .hero > img {
+  .hero-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -372,87 +355,21 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     object-fit: cover;
     object-position: center 25%;
     z-index: 1;
-    filter: brightness(0.55);
   }
 
-  .hero-contenido {
-    position: relative;
-    z-index: 10;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-  }
-
-  .hero-contenido h1 {
-    font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 6vw, 4.75rem);
-    color: var(--color-crema);
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-  }
-
-  .hero-subtitulo {
-    display: block;
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: clamp(1.4rem, 3.2vw, 2.35rem);
-    color: var(--color-terracota);
-    margin-top: 0.75rem;
-    font-weight: 400;
-  }
-
-  .hero-botones {
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-  }
-
-  .btn-hero {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2.25rem;
-    border-radius: 2px;
-    font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-whatsapp {
-    background-color: var(--color-terracota);
-    color: var(--color-crema);
-    box-shadow: 0 4px 20px rgba(224, 118, 77, 0.4);
-  }
-
-  .btn-whatsapp:hover {
-    background-color: #d0653d;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(224, 118, 77, 0.55);
-  }
-
-  .btn-email {
-    background-color: rgba(255, 255, 255, 0.12);
-    color: var(--color-crema);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-
-  .btn-email:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: var(--color-crema);
-    transform: translateY(-2px);
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(
+      180deg, 
+      rgba(13, 13, 13, 0.45) 0%, 
+      rgba(13, 13, 13, 0.2) 50%, 
+      rgba(13, 13, 13, 0.85) 100%
+    );
   }
 
   /* BOTONES DE CONTACTO FLOTANTES FIJOS (A LA DERECHA, PERMANECEN FIJOS AL SCROLL) */
