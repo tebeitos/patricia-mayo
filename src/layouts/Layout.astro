@@ -22,6 +22,41 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
 
+    <!-- SEO Local & Open Graph -->
+    <meta name="geo.region" content="ES-O" />
+    <meta name="geo.placename" content="Gijón" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Patricia Mayo · Makeup Artist" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/patricia.jpg" />
+
+    <!-- Schema.org JSON-LD (SEO Local para Google Search & Maps) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Patricia Mayo · Maquilladora Profesional en Gijón",
+      "image": "/patricia.jpg",
+      "telephone": "+34691352577",
+      "email": "makeuppatti@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gijón",
+        "addressRegion": "Asturias",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        "Gijón",
+        "Oviedo",
+        "Avilés",
+        "Asturias",
+        "España"
+      ],
+      "url": "https://patriciamayo.es",
+      "description": "Servicios de maquillaje profesional para bodas, novias, eventos de noche, fiesta, shootings de moda y caracterización en Gijón, Asturias y con opción de desplazamiento."
+    })} />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
