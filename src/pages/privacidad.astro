@@ -6,10 +6,10 @@ import { negocio } from '../data/negocio';
 <Layout title={`Política de Privacidad · ${negocio.nombre}`} description={`Política de privacidad y protección de datos de ${negocio.nombre}`}>
   <header class="legal-header bg-negro">
     <div class="container legal-header-inner">
-      <a href="/">
+      <a href="/" class="link-volver">&larr; Volver al inicio</a>
+      <a href="/" class="logo-link">
         <img src="/logo.png" alt={negocio.nombre} class="logo-img" />
       </a>
-      <a href="/" class="link-volver">&larr; Volver al inicio</a>
     </div>
   </header>
 
@@ -44,7 +44,7 @@ import { negocio } from '../data/negocio';
 
 <style>
   .legal-header {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid rgba(242, 239, 232, 0.1);
   }
 
@@ -63,6 +63,21 @@ import { negocio } from '../data/negocio';
 
   .link-volver:hover {
     color: var(--color-terracota);
+  }
+
+  .logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    height: 26px;
+    max-width: 180px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
   }
 
   .legal-content {
