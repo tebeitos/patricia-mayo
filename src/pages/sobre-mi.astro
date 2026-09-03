@@ -21,19 +21,19 @@ const description = "Conoce a Patricia Mayo, maquilladora profesional en Gijón 
       <a href="/" class="logo-link">
         <img src="/logo.png" alt="Patricia Mayo" class="logo-img logo-negro" />
       </a>
-
-      <!-- Overlay Menú Navegación -->
-      <nav id="mobile-menu" class="mobile-menu bg-negro">
-        <button id="menu-close" class="menu-close" aria-label="Cerrar menú">&times;</button>
-        <ul class="menu-list">
-          <li><a href="/#servicios" class="menu-link">Lo que puedo hacer por ti</a></li>
-          <li><a href="/#galeria" class="menu-link">Galería</a></li>
-          <li><a href="/sobre-mi" class="menu-link text-terracota">Sobre mí</a></li>
-          <li><a href="/#reservar" class="menu-link">Reservar</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Overlay Menú Navegación -->
+  <nav id="mobile-menu" class="mobile-menu bg-negro">
+    <button id="menu-close" class="menu-close" aria-label="Cerrar menú">&times;</button>
+    <ul class="menu-list">
+      <li><a href="/#servicios" class="menu-link">Lo que puedo hacer por ti</a></li>
+      <li><a href="/#galeria" class="menu-link">Galería</a></li>
+      <li><a href="/sobre-mi" class="menu-link text-terracota">Sobre mí</a></li>
+      <li><a href="/#reservar" class="menu-link">Reservar</a></li>
+    </ul>
+  </nav>
 
   <!-- BOTONES DE CONTACTO FLOTANTES FIJOS (A LA DERECHA) -->
   <div class="floating-contact-bar">
@@ -148,7 +148,7 @@ const description = "Conoce a Patricia Mayo, maquilladora profesional en Gijón 
 <style>
   /* Header exactamente igual al Home, pero con fondo blanco y elementos en negro */
   .site-header-blanco {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -156,12 +156,14 @@ const description = "Conoce a Patricia Mayo, maquilladora profesional en Gijón 
     padding: 1.25rem 0;
     background: #ffffff !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    width: 100%;
   }
 
   .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
   .logo-link {
@@ -211,7 +213,7 @@ const description = "Conoce a Patricia Mayo, maquilladora profesional en Gijón 
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 300;
+    z-index: 3000;
     background-color: var(--color-negro);
     display: flex;
     flex-direction: column;
@@ -304,7 +306,7 @@ const description = "Conoce a Patricia Mayo, maquilladora profesional en Gijón 
 
   .page-sobre-mi {
     min-height: 100vh;
-    padding-top: 4.25rem;
+    padding-top: 5.5rem;
     padding-bottom: 4rem;
   }
 
@@ -312,7 +314,7 @@ const description = "Conoce a Patricia Mayo, maquilladora profesional en Gijón 
     font-family: var(--font-serif);
     font-size: clamp(2.25rem, 4.5vw, 3.5rem);
     color: var(--color-grafito);
-    margin-bottom: 0.85rem;
+    margin-bottom: 1.5rem;
   }
 
   .sobre-grid {
