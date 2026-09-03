@@ -420,7 +420,8 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
   .hero-content-container {
     position: relative;
     z-index: 10;
-    padding-bottom: 8.5rem;
+    padding-bottom: 9.75rem;
+    transform: translateY(-20px);
   }
 
   .hero-text-block {
@@ -443,9 +444,12 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
 
   .hero-contact-row {
     display: flex;
+    flex-direction: row !important;
     align-items: center;
+    justify-content: flex-start;
     gap: 1.25rem;
-    margin-top: 2.25rem;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
   }
 
   .hero-contact-btn {
