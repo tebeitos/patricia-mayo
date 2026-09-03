@@ -244,15 +244,14 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
 </script>
 
 <style>
-  /* Header transparente */
+  /* Header blanco superior */
   .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
     z-index: 100;
-    padding: 2rem 0;
-    background: transparent;
+    padding: 1.25rem 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
 
   .header-inner {
@@ -343,8 +342,8 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
   .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 650px;
+    height: calc(100vh - 80px);
+    min-height: 580px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
