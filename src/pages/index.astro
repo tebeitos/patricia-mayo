@@ -251,24 +251,28 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
     background: transparent;
     border-bottom: none;
+    width: 100%;
   }
 
   .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
   .logo-link {
     display: inline-flex;
     align-items: center;
+    text-decoration: none;
   }
 
   .logo-img {
-    height: 28px;
+    height: 26px;
+    max-width: 180px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -282,17 +286,21 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    padding: 4px;
+    padding: 8px;
     z-index: 110;
+    flex-shrink: 0;
   }
 
   .hamburger-line {
     display: block;
-    width: 26px;
+    width: 24px;
     height: 2px;
     background-color: var(--color-crema);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 1px;
   }
 
   /* Mobile menu overlay */
@@ -300,9 +308,12 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 200;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    background-color: var(--color-negro);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -319,14 +330,15 @@ const description = "Maquillaje de fiesta, noche, sesiones fotográficas y trans
 
   .menu-close {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1.5rem;
+    right: 1.5rem;
     background: transparent;
     border: none;
     color: var(--color-crema);
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
     cursor: pointer;
+    padding: 0.5rem;
   }
 
   .menu-list {
