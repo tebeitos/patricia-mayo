@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { negocio } from '../data/negocio';
+---
+
+<Layout title={`Política de Privacidad · ${negocio.nombre}`} description={`Política de privacidad y protección de datos de ${negocio.nombre}`}>
+  <header class="legal-header bg-negro">
+    <div class="container legal-header-inner">
+      <a href="/">
+        <img src="/logo.png" alt={negocio.nombre} class="logo-img" />
+      </a>
+      <a href="/" class="link-volver">&larr; Volver al inicio</a>
+    </div>
+  </header>
+
+  <main class="legal-content bg-crema">
+    <div class="container legal-container">
+      <h1 class="legal-title">Política de Privacidad</h1>
+      <p class="legal-date">Última actualización: Septiembre 2026</p>
+
+      <section class="legal-section">
+        <h2>1. Tratamiento de Datos Personales</h2>
+        <p>
+          En este sitio web se respeta la privacidad de las usuarias y usuarios. La comunicación para reserva de citas y consultas se realiza directamente a través de canales externos autorizados como WhatsApp e Instagram.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Finalidad del Tratamiento</h2>
+        <p>
+          Los datos de contacto facilitados voluntariamente por las usuarias (tales como nombre, teléfono o detalles del servicio solicitado) se utilizarán exclusivamente para la gestión de citas, consultas de disponibilidad y presupuesto de servicios de maquillaje.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Derechos de la Usuaria</h2>
+        <p>
+          En cualquier momento puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición enviando un mensaje directo a través de nuestros canales oficiales de contacto.
+        </p>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .legal-header {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(242, 239, 232, 0.1);
+  }
+
+  .legal-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link-volver {
+    color: var(--color-crema);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+  }
+
+  .link-volver:hover {
+    color: var(--color-terracota);
+  }
+
+  .legal-content {
+    padding: 5rem 1.5rem 8rem;
+    min-height: 70vh;
+  }
+
+  .legal-container {
+    max-width: 800px;
+  }
+
+  .legal-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-grafito);
+    margin-bottom: 0.5rem;
+  }
+
+  .legal-date {
+    font-size: 0.875rem;
+    color: var(--color-grafito);
+    opacity: 0.6;
+    margin-bottom: 3rem;
+  }
+
+  .legal-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .legal-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    color: var(--color-grafito);
+    margin-bottom: 1rem;
+  }
+
+  .legal-section p {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    color: var(--color-grafito);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+</style>

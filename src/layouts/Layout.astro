@@ -1,0 +1,190 @@
+---
+import { negocio } from '../data/negocio';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Patricia Mayo · Makeup Artist · Gijón, Asturias",
+  description = "Maquillaje de fiesta, noche, sesiones fotográficas y transformación artística. Patricia Mayo, makeup artist en Gijón y Asturias."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" 
+      rel="stylesheet" 
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Paleta de colores */
+    --color-crema: #F2EFE8;
+    --color-grafito: #2D2D2D;
+    --color-terracota: #C4572A;
+    --color-negro: #0D0D0D;
+
+    /* Tipografías */
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--color-negro);
+    color: var(--color-crema);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-negro);
+    color: var(--color-crema);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Font classes */
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  /* Headings & Serif */
+  h1, h2, h3, h4, .titular-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  h1 em, h2 em, h3 em, .titular-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Números de servicios (01, 02...) */
+  .numero-servicio {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--color-terracota);
+  }
+
+  /* Secciones principales */
+  .bg-crema {
+    background-color: var(--color-crema);
+    color: var(--color-grafito);
+  }
+
+  .bg-negro {
+    background-color: var(--color-negro);
+    color: var(--color-crema);
+  }
+
+  .text-terracota {
+    color: var(--color-terracota);
+  }
+
+  .text-grafito {
+    color: var(--color-grafito);
+  }
+
+  .text-crema {
+    color: var(--color-crema);
+  }
+
+  /* Botón Naranja / Terracota */
+  .btn-naranja {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-terracota);
+    color: #FFFFFF;
+    padding: 1.1rem 2.25rem;
+    border-radius: 2px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.0625rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-naranja:hover {
+    background-color: #A8451D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 87, 42, 0.3);
+  }
+
+  /* Logo */
+  .logo-img {
+    max-width: 160px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Image responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-negro);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-terracota);
+  }
+</style>

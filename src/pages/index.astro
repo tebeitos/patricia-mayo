@@ -1,0 +1,789 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { negocio, servicios } from '../data/negocio';
+
+const title = "Patricia Mayo · Makeup Artist · Gijón, Asturias";
+const description = "Maquillaje de fiesta, noche, sesiones fotográficas y transformación artística. Patricia Mayo, makeup artist en Gijón y Asturias.";
+---
+
+<Layout title={title} description={description}>
+  <!-- HEADER TRANSPARENTE CON NAVEGACIÓN Y MENÚ HAMBURGUESA -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo-link">
+        <img src="/logo.png" alt="Patricia Mayo" class="logo-img" />
+      </a>
+      
+      <!-- Menú Hamburguesa en crema -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Overlay Menú Navegación -->
+      <nav id="mobile-menu" class="mobile-menu bg-negro">
+        <button id="menu-close" class="menu-close" aria-label="Cerrar menú">&times;</button>
+        <ul class="menu-list">
+          <li><a href="#servicios" class="menu-link">Servicios</a></li>
+          <li><a href="#galeria" class="menu-link">Galería</a></li>
+          <li><a href="#sobre-mi" class="menu-link">Sobre Patricia</a></li>
+          <li><a href="#reservar" class="menu-link text-terracota">Reservar</a></li>
+          <li><a href={negocio.instagram} target="_blank" rel="noopener noreferrer" class="menu-link">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN 1 — HERO -->
+    <section class="hero-section bg-negro">
+      <div class="hero-bg-wrap">
+        <img src="/hero.jpg" alt="Patricia Mayo Makeup Hero" class="hero-img" />
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="container hero-content-container">
+        <div class="hero-text-block">
+          <h1 class="hero-heading">
+            <span class="hero-line">Tú pones la noche.</span>
+            <span class="hero-line">Yo pongo el resto.</span>
+            <span class="hero-subline">Y si prefieres la mañana, también.</span>
+          </h1>
+          <a href="#reservar" class="btn-naranja hero-btn">
+            Reservar con Patricia
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2 — GALERÍA CORTA -->
+    <section class="galeria-corta bg-negro">
+      <div class="container-fluid">
+        <div class="galeria-corta-grid">
+          <div class="galeria-corta-item">
+            <img src="/galeria1.jpg" alt="Maquillaje Patricia Mayo 1" loading="lazy" />
+          </div>
+          <div class="galeria-corta-item">
+            <img src="/galeria2.jpg" alt="Maquillaje Patricia Mayo 2" loading="lazy" />
+          </div>
+          <div class="galeria-corta-item">
+            <img src="/galeria3.jpg" alt="Maquillaje Patricia Mayo 3" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3 — FRASE DE CLIENTA -->
+    <section class="frase-clienta bg-crema">
+      <div class="container frase-container">
+        <blockquote class="quote-text">
+          “Llegué a casa a las seis de la mañana<br />y seguía impecable.”
+        </blockquote>
+        <span class="quote-author">— Cliente real</span>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4 — SERVICIOS -->
+    <section id="servicios" class="servicios-section bg-crema">
+      <div class="container servicios-container">
+        <h2 class="servicios-titulo-principal">Lo que hago</h2>
+
+        <div class="servicios-lista">
+          {servicios.map((servicio, index) => (
+            <div class="servicio-bloque">
+              {index > 0 && <hr class="servicio-divider" />}
+              <div class="servicio-contenido">
+                <span class="numero-servicio">{servicio.numero}</span>
+                <h3 class="servicio-titulo">{servicio.titulo}</h3>
+                <p class="servicio-descripcion">{servicio.descripcion}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5 — GALERÍA COMPLETA -->
+    <section id="galeria" class="galeria-completa bg-negro">
+      <div class="container">
+        <div class="galeria-grid-2col">
+          <div class="galeria-img-wrap">
+            <img src="/galeria4.jpg" alt="Trabajo Maquillaje 4" loading="lazy" />
+          </div>
+          <div class="galeria-img-wrap">
+            <img src="/galeria5.jpg" alt="Trabajo Maquillaje 5" loading="lazy" />
+          </div>
+          <div class="galeria-img-wrap">
+            <img src="/galeria6.jpg" alt="Trabajo Maquillaje 6" loading="lazy" />
+          </div>
+          <div class="galeria-img-wrap">
+            <img src="/galeria7.jpg" alt="Trabajo Maquillaje 7" loading="lazy" />
+          </div>
+          <div class="galeria-img-wrap">
+            <img src="/galeria8.jpg" alt="Trabajo Maquillaje 8" loading="lazy" />
+          </div>
+          <div class="galeria-img-wrap">
+            <img src="/galeria9.jpg" alt="Trabajo Maquillaje 9" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="galeria-footer-link">
+          <a href={negocio.instagram} target="_blank" rel="noopener noreferrer" class="link-instagram">
+            Ver más en Instagram &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6 — SOBRE PATRICIA -->
+    <section id="sobre-mi" class="sobre-patricia bg-crema">
+      <div class="container sobre-container">
+        <div class="sobre-grid">
+          <div class="sobre-col-foto">
+            <img src="/patricia.jpg" alt="Patricia Mayo Makeup Artist" class="sobre-foto" loading="lazy" />
+          </div>
+          <div class="sobre-col-texto">
+            <p class="sobre-parrafo sobre-destacado">
+              Patricia Mayo lleva años haciendo que<br />
+              la gente se mire al espejo y le guste<br />
+              lo que ve.
+            </p>
+            <p class="sobre-parrafo">
+              Formada en el Alberto Dugarte Institute.<br />
+              Experiencia como asesora de belleza<br />
+              en CHANEL.
+            </p>
+            <p class="sobre-parrafo">
+              Trabaja en Gijón, por toda Asturias,<br />
+              y donde haga falta.
+            </p>
+            <p class="sobre-parrafo sobre-criterio">
+              No tiene un estilo fijo.<br />
+              Tiene criterio. Que no es lo mismo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7 — RESERVAR -->
+    <section id="reservar" class="reservar-section bg-negro">
+      <div class="container reservar-container">
+        <h2 class="reservar-titulo">¿Tienes una fecha en mente?</h2>
+        <p class="reservar-subtitulo">
+          Cuéntame qué necesitas.<br />
+          Respondo rápido.
+        </p>
+
+        <div class="reservar-action">
+          <a 
+            href="https://wa.me/34691352577?text=Hola%20Patricia%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20contigo." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-naranja btn-reservar-lg"
+          >
+            &rarr; Escríbeme por WhatsApp
+          </a>
+        </div>
+
+        <div class="reservar-alt">
+          <a href={negocio.instagram} target="_blank" rel="noopener noreferrer" class="link-instagram-alt">
+            O en Instagram · @makeuppatti
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer bg-negro">
+    <div class="container footer-content">
+      <div class="footer-principal">
+        <p class="footer-linea">Patricia Mayo · Makeup Artist</p>
+        <p class="footer-linea">Gijón · Asturias</p>
+        <p class="footer-linea">
+          <a href={negocio.instagram} target="_blank" rel="noopener noreferrer" class="footer-ig">@makeuppatti</a>
+        </p>
+      </div>
+
+      <div class="footer-legal">
+        <a href="/aviso-legal">Aviso Legal</a>
+        <span class="footer-legal-sep">·</span>
+        <a href="/privacidad">Política de Privacidad</a>
+        <span class="footer-legal-sep">·</span>
+        <span>© 2026 Patricia Mayo</span>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  // Menú Hamburguesa interactivo
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuLinks = document.querySelectorAll('.menu-link');
+
+  function openMenu() {
+    mobileMenu?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle?.addEventListener('click', openMenu);
+  menuClose?.addEventListener('click', closeMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+
+<style>
+  /* Header transparente */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 2rem 0;
+    background: transparent;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: inline-block;
+  }
+
+  /* Menú Hamburguesa */
+  .menu-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    z-index: 110;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-crema);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: transparent;
+    border: none;
+    color: var(--color-crema);
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .menu-list {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .menu-link {
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: var(--color-crema);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .menu-link:hover {
+    color: var(--color-terracota);
+  }
+
+  /* SECCIÓN 1 — HERO */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-bg-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg, 
+      rgba(13, 13, 13, 0.45) 0%, 
+      rgba(13, 13, 13, 0.2) 50%, 
+      rgba(13, 13, 13, 0.85) 100%
+    );
+  }
+
+  .hero-content-container {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 5rem;
+  }
+
+  .hero-text-block {
+    max-width: 700px;
+  }
+
+  .hero-heading {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-line {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    color: var(--color-crema);
+    line-height: 1.1;
+  }
+
+  .hero-subline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+    color: var(--color-crema);
+    margin-top: 0.5rem;
+    line-height: 1.2;
+    opacity: 0.95;
+  }
+
+  .hero-btn {
+    display: inline-block;
+  }
+
+  /* SECCIÓN 2 — GALERÍA CORTA */
+  .galeria-corta {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .container-fluid {
+    width: 100%;
+    padding: 0;
+  }
+
+  .galeria-corta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 0;
+  }
+
+  .galeria-corta-item {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .galeria-corta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .galeria-corta-item:hover img {
+    transform: scale(1.03);
+  }
+
+  /* SECCIÓN 3 — FRASE DE CLIENTA */
+  .frase-clienta {
+    padding: 8rem 1.5rem;
+    text-align: center;
+  }
+
+  .frase-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .quote-text {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    color: var(--color-grafito);
+    line-height: 1.25;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  .quote-author {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-grafito);
+    opacity: 0.65;
+    display: block;
+  }
+
+  /* SECCIÓN 4 — SERVICIOS */
+  .servicios-section {
+    padding: 6rem 1.5rem 8rem;
+  }
+
+  .servicios-container {
+    max-width: 900px;
+  }
+
+  .servicios-titulo-principal {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+    color: var(--color-grafito);
+    margin-bottom: 4rem;
+  }
+
+  .servicios-lista {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servicio-bloque {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servicio-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-terracota);
+    opacity: 0.6;
+    margin: 3.5rem 0;
+  }
+
+  .servicio-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servicio-bloque .numero-servicio {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .servicio-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: var(--color-grafito);
+    margin-bottom: 1rem;
+  }
+
+  .servicio-descripcion {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    color: var(--color-grafito);
+    line-height: 1.7;
+    max-width: 720px;
+    opacity: 0.9;
+  }
+
+  /* SECCIÓN 5 — GALERÍA COMPLETA */
+  .galeria-completa {
+    padding: 8rem 1.5rem;
+  }
+
+  .galeria-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .galeria-img-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: #1a1a1a;
+  }
+
+  .galeria-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .galeria-img-wrap:hover img {
+    transform: scale(1.04);
+  }
+
+  .galeria-footer-link {
+    text-align: center;
+  }
+
+  .link-instagram {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-crema);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+
+  .link-instagram:hover {
+    color: var(--color-terracota);
+    transform: translateX(4px);
+  }
+
+  /* SECCIÓN 6 — SOBRE PATRICIA */
+  .sobre-patricia {
+    padding: 8rem 1.5rem;
+  }
+
+  .sobre-container {
+    max-width: 1100px;
+  }
+
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .sobre-col-foto {
+    width: 100%;
+  }
+
+  .sobre-foto {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+  }
+
+  .sobre-col-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sobre-parrafo {
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    color: var(--color-grafito);
+    line-height: 1.5;
+  }
+
+  .sobre-destacado {
+    font-size: 1.625rem;
+  }
+
+  .sobre-criterio {
+    font-style: italic;
+    color: var(--color-terracota);
+    font-size: 1.5rem;
+  }
+
+  /* SECCIÓN 7 — RESERVAR */
+  .reservar-section {
+    padding: 8rem 1.5rem;
+    text-align: center;
+  }
+
+  .reservar-container {
+    max-width: 700px;
+  }
+
+  .reservar-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+    color: var(--color-crema);
+    margin-bottom: 1.5rem;
+  }
+
+  .reservar-subtitulo {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    color: var(--color-crema);
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+  .btn-reservar-lg {
+    font-size: 1.1875rem;
+    padding: 1.25rem 2.75rem;
+  }
+
+  .reservar-alt {
+    margin-top: 2rem;
+  }
+
+  .link-instagram-alt {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: rgba(242, 239, 232, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .link-instagram-alt:hover {
+    color: var(--color-terracota);
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding: 4rem 1.5rem 3rem;
+    border-top: 1px solid rgba(242, 239, 232, 0.08);
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .footer-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-linea {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--color-crema);
+  }
+
+  .footer-ig {
+    color: var(--color-crema);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-ig:hover {
+    color: var(--color-terracota);
+  }
+
+  .footer-legal {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: rgba(242, 239, 232, 0.4);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-legal a {
+    color: rgba(242, 239, 232, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-legal a:hover {
+    color: var(--color-crema);
+  }
+
+  .footer-legal-sep {
+    opacity: 0.3;
+  }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 900px) {
+    .galeria-corta-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .galeria-corta-item {
+      height: 50vh;
+    }
+
+    .sobre-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .sobre-col-foto {
+      order: 1;
+    }
+
+    .sobre-col-texto {
+      order: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .galeria-grid-2col {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .hero-content-container {
+      padding-bottom: 3.5rem;
+    }
+  }
+</style>
