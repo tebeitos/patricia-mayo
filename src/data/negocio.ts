@@ -16,7 +16,7 @@ export const servicios = [
   {
     numero: "02",
     titulo: "Noche y fiesta",
-    descripcion: "El look que aguanta desde que sales hasta que vuelves. Sin retoques, sin sorpresas, sin que a medianoche ya no quede nada."
+    descripcion: "El look que aguanta desde que sales hasta que vuelves. Sin retoques, sin sorpresas, sin que a medianoche ya parezcas un mapache."
   },
   {
     numero: "03",
