@@ -31,6 +31,6 @@ export const servicios = [
   {
     numero: "05",
     titulo: "Aprende a maquillarte tú",
-    descripcion: "Clases personalizadas de automaquillaje para aprender las técnicas que mejor funcionan con tu cara, tu tono de piel y tu estilo. Aprenderás a preparar la piel, a encontrar tu base perfecta, a dominar el delineado que siempre se te tuerce y a crear un look de día y otro de noche con los mismos productos.\n\nUna sola sesión puede cambiarte la rutina de los próximos años."
+    descripcion: "Clases personalizadas de automaquillaje para aprender las técnicas que mejor funcionan con tu cara, tu tono de piel y tu estilo. Aprenderás a preparar la piel, a encontrar tu base perfecta, a dominar el delineado que siempre se te tuerce y a crear un look de día y otro de noche con los mismos productos."
   }
 ];
