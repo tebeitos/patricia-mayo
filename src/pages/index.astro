@@ -125,49 +125,56 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
       </div>
     </section>
 
-    <!-- SECCIÓN 5 — GALERÍA POLAROID -->
+    <!-- SECCIÓN 5 — GALERÍA FOTO GRANDE + DETALLE EN ZOOM -->
     <section id="galeria" class="galeria-seccion">
 
-      <div class="polaroid-grid">
-
-        <div class="polaroid polaroid-1">
-          <img src="/galeria1.jpg" alt="Trabajo Patricia Mayo" />
+      <!-- BLOQUE 1 -->
+      <div class="detalle-bloque">
+        <div class="detalle-grande">
+          <img src="/galeria1.jpg" alt="Look completo Patricia Mayo" />
         </div>
-
-        <div class="polaroid polaroid-2">
-          <img src="/galeria2.jpg" alt="Trabajo Patricia Mayo" />
+        <div class="detalle-lateral">
+          <div class="detalle-zoom">
+            <img src="/galeria2.jpg" alt="Detalle maquillaje Patricia Mayo" />
+          </div>
+          <p class="detalle-texto">
+            Cada look empieza por los ojos.
+          </p>
         </div>
-
-        <div class="polaroid polaroid-3">
-          <img src="/galeria3.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
-        <div class="polaroid polaroid-4">
-          <img src="/galeria4.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
-        <div class="polaroid polaroid-5">
-          <img src="/galeria5.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
-        <div class="polaroid polaroid-6">
-          <img src="/galeria6.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
-        <div class="polaroid polaroid-7">
-          <img src="/galeria7.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
-        <div class="polaroid polaroid-8">
-          <img src="/galeria8.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
-        <div class="polaroid polaroid-9">
-          <img src="/galeria9.jpg" alt="Trabajo Patricia Mayo" />
-        </div>
-
       </div>
 
+      <!-- BLOQUE 2 — invertido -->
+      <div class="detalle-bloque detalle-invertido">
+        <div class="detalle-lateral">
+          <div class="detalle-zoom">
+            <img src="/galeria4.jpg" alt="Detalle maquillaje Patricia Mayo" />
+          </div>
+          <p class="detalle-texto">
+            El detalle lo es todo.
+          </p>
+        </div>
+        <div class="detalle-grande">
+          <img src="/galeria3.jpg" alt="Look completo Patricia Mayo" />
+        </div>
+      </div>
+
+      <!-- BLOQUE 3 -->
+      <div class="detalle-bloque">
+        <div class="detalle-grande">
+          <img src="/galeria5.jpg" alt="Look completo Patricia Mayo" />
+        </div>
+        <div class="detalle-lateral">
+          <div class="detalle-zoom">
+            <img src="/galeria6.jpg" alt="Detalle maquillaje Patricia Mayo" />
+          </div>
+          <p class="detalle-texto">
+            Lo que la cámara no perdona,<br />
+            Patricia lo cuida.
+          </p>
+        </div>
+      </div>
+
+      <!-- ENLACE INSTAGRAM -->
       <div class="galeria-instagram">
         <a href="https://www.instagram.com/makeuppatti" target="_blank" rel="noopener noreferrer">
           Ver más en Instagram &rarr; @makeuppatti
@@ -636,59 +643,79 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     opacity: 0.9;
   }
 
-  /* GALERÍA POLAROID */
+  /* GALERÍA FOTO GRANDE + DETALLE EN ZOOM */
   .galeria-seccion {
     background-color: #0D0D0D;
-    padding: 5rem 2rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
   }
 
-  /* GRID DE POLAROIDS */
-  .polaroid-grid {
+  /* BLOQUE FOTO GRANDE + DETALLE */
+  .detalle-bloque {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  /* POLAROID BASE */
-  .polaroid {
-    background-color: #ffffff;
-    padding: 0.75rem 0.75rem 2.5rem 0.75rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .polaroid img {
+    grid-template-columns: 3fr 2fr;
+    gap: 0;
     width: 100%;
-    aspect-ratio: 1/1;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .detalle-invertido {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  /* FOTO GRANDE */
+  .detalle-grande img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
+    aspect-ratio: 3/4;
   }
 
-  /* ROTACIONES DISTINTAS PARA CADA POLAROID */
-  .polaroid-1 { transform: rotate(-2deg); }
-  .polaroid-2 { transform: rotate(1.5deg); }
-  .polaroid-3 { transform: rotate(-1deg); }
-  .polaroid-4 { transform: rotate(2deg); }
-  .polaroid-5 { transform: rotate(-1.5deg); }
-  .polaroid-6 { transform: rotate(1deg); }
-  .polaroid-7 { transform: rotate(-2.5deg); }
-  .polaroid-8 { transform: rotate(1.5deg); }
-  .polaroid-9 { transform: rotate(-1deg); }
+  /* LATERAL CON ZOOM Y TEXTO */
+  .detalle-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    align-items: center;
+  }
 
-  /* HOVER: SE ENDEREZA Y SUBE */
-  .polaroid:hover {
-    transform: rotate(0deg) translateY(-8px) scale(1.03);
-    z-index: 10;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+  /* ZOOM */
+  .detalle-zoom {
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid rgba(242, 239, 232, 0.15);
+  }
+
+  .detalle-zoom img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1/1;
+  }
+
+  /* TEXTO */
+  .detalle-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #F2EFE8;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.85;
   }
 
   /* INSTAGRAM */
   .galeria-instagram {
     text-align: center;
-    padding: 3rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
 
   .galeria-instagram a {
@@ -926,19 +953,27 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     }
   }
 
-  /* MÓVIL POLAROID */
+  /* MÓVIL FOTO GRANDE + DETALLE */
   @media (max-width: 768px) {
-    .polaroid-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      padding: 1rem;
+    .detalle-bloque {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
-  }
 
-  @media (max-width: 480px) {
-    .polaroid-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+    .detalle-invertido {
+      grid-template-columns: 1fr;
+    }
+
+    .detalle-invertido .detalle-lateral {
+      order: -1;
+    }
+
+    .detalle-lateral {
+      padding: 1.5rem;
+    }
+
+    .galeria-seccion {
+      gap: 4rem;
     }
   }
 </style>
