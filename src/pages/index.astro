@@ -182,7 +182,6 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
 
     <!-- SECCIÓN 7 — RESERVAR -->
     <section id="reservar" class="reservar-section bg-negro">
-      <div class="separador-adorno">✦</div>
       <div class="container reservar-container">
         <h2 class="reservar-titulo">¿Lista para estar radiante?</h2>
         <p class="reservar-subtitulo">
@@ -761,30 +760,13 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     font-size: 1.5rem;
   }
 
-  /* SECCIÓN 7 — RESERVAR */
+  /* SECCIÓN 7 — RESERVAR CON SOMBREADO ESTÉTICO Y DEGRADADO */
   .reservar-section {
-    padding: 5.5rem 1.5rem 6rem;
+    padding: 6rem 1.5rem;
     text-align: center;
-    background-color: var(--color-negro) !important;
+    background: linear-gradient(180deg, #050505 0%, #0D0D0D 50%, #050505 100%) !important;
+    box-shadow: inset 0 30px 40px -15px rgba(0, 0, 0, 0.9), 0 -20px 40px rgba(0, 0, 0, 0.25);
     position: relative;
-    border-top: 1px solid var(--color-terracota);
-  }
-
-  .separador-adorno {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-crema);
-    color: var(--color-terracota);
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    border-radius: 50%;
-    border: 1px solid var(--color-terracota);
   }
 
   .reservar-container {
