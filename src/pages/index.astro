@@ -128,7 +128,7 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     <!-- SECCIÓN 5 — GALERÍA COMPLETA -->
     <section id="galeria" class="galeria-seccion">
 
-      <!-- BLOQUE 1: Mosaico asimétrico -->
+      <!-- FILA 1: Grande izquierda, dos pequeñas derecha -->
       <div class="mosaico">
         <div class="mosaico-grande">
           <img src="/galeria1.jpg" alt="Trabajo Patricia Mayo" />
@@ -139,29 +139,29 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
         </div>
       </div>
 
-      <!-- BLOQUE 2: Foto grande + detalle -->
-      <div class="detalle-bloque">
-        <div class="detalle-grande">
-          <img src="/galeria4.jpg" alt="Look completo Patricia Mayo" />
-        </div>
-        <div class="detalle-zoom">
-          <img src="/galeria5.jpg" alt="Detalle maquillaje Patricia Mayo" />
-          <p class="detalle-texto">El detalle lo es todo.</p>
-        </div>
-      </div>
-
-      <!-- BLOQUE 3: Mosaico asimétrico invertido -->
+      <!-- FILA 2: Dos pequeñas izquierda, grande derecha -->
       <div class="mosaico mosaico-invertido">
         <div class="mosaico-pequeñas">
-          <img src="/galeria6.jpg" alt="Trabajo Patricia Mayo" />
-          <img src="/galeria7.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria4.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria5.jpg" alt="Trabajo Patricia Mayo" />
         </div>
         <div class="mosaico-grande">
-          <img src="/galeria8.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria6.jpg" alt="Trabajo Patricia Mayo" />
         </div>
       </div>
 
-      <!-- ENLACE A INSTAGRAM -->
+      <!-- FILA 3: Grande izquierda, dos pequeñas derecha -->
+      <div class="mosaico">
+        <div class="mosaico-grande">
+          <img src="/galeria7.jpg" alt="Trabajo Patricia Mayo" />
+        </div>
+        <div class="mosaico-pequeñas">
+          <img src="/galeria8.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria9.jpg" alt="Trabajo Patricia Mayo" />
+        </div>
+      </div>
+
+      <!-- ENLACE INSTAGRAM -->
       <div class="galeria-instagram">
         <a href="https://www.instagram.com/makeuppatti" target="_blank" rel="noopener noreferrer">
           Ver más en Instagram &rarr; @makeuppatti
@@ -630,20 +630,20 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     opacity: 0.9;
   }
 
-  /* NUEVA SECCIÓN GALERÍA */
+  /* NUEVA SECCIÓN GALERÍA MOSAICO */
   .galeria-seccion {
     background-color: #0D0D0D;
-    padding: 4rem 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
-  /* MOSAICO ASIMÉTRICO */
+  /* MOSAICO */
   .mosaico {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 0.5rem;
+    gap: 0.4rem;
     width: 100%;
   }
 
@@ -656,61 +656,21 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     height: 100%;
     object-fit: cover;
     display: block;
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
   }
 
   .mosaico-pequeñas {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .mosaico-pequeñas img {
     width: 100%;
-    height: 50%;
+    flex: 1;
     object-fit: cover;
     display: block;
     aspect-ratio: 1/1;
-  }
-
-  /* FOTO GRANDE + DETALLE */
-  .detalle-bloque {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 0.5rem;
-    width: 100%;
-    align-items: center;
-  }
-
-  .detalle-grande img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    aspect-ratio: 4/5;
-  }
-
-  .detalle-zoom {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-  }
-
-  .detalle-zoom img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    aspect-ratio: 1/1;
-    border-radius: 4px;
-  }
-
-  .detalle-texto {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #F2EFE8;
-    text-align: center;
-    margin: 0;
   }
 
   /* INSTAGRAM */
@@ -722,7 +682,7 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
   .galeria-instagram a {
     color: #C4572A;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     border-bottom: 1px solid #C4572A;
@@ -957,23 +917,15 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
   /* MÓVIL GALERÍA */
   @media (max-width: 768px) {
     .mosaico {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .mosaico-invertido {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
-    .mosaico-pequeñas {
-      flex-direction: row;
-    }
-
-    .detalle-bloque {
-      grid-template-columns: 1fr;
-    }
-
-    .detalle-zoom {
-      padding: 1rem;
+    .mosaico-grande img {
+      aspect-ratio: 1/1;
     }
   }
 </style>
