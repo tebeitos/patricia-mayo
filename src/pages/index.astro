@@ -125,52 +125,39 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
       </div>
     </section>
 
-    <!-- SECCIÓN 5 — GALERÍA FOTO GRANDE + DETALLE EN ZOOM -->
+    <!-- SECCIÓN 5 — GALERÍA COMPLETA MOSAICO -->
     <section id="galeria" class="galeria-seccion">
 
-      <!-- BLOQUE 1 -->
-      <div class="detalle-bloque">
-        <div class="detalle-grande">
-          <img src="/galeria1.jpg" alt="Look completo Patricia Mayo" />
+      <!-- FILA 1: Grande izquierda, dos pequeñas derecha -->
+      <div class="mosaico">
+        <div class="mosaico-grande">
+          <img src="/galeria1.jpg" alt="Trabajo Patricia Mayo" />
         </div>
-        <div class="detalle-lateral">
-          <div class="detalle-zoom">
-            <img src="/galeria2.jpg" alt="Detalle maquillaje Patricia Mayo" />
-          </div>
-          <p class="detalle-texto">
-            Cada look empieza por los ojos.
-          </p>
+        <div class="mosaico-pequeñas">
+          <img src="/galeria2.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria3.jpg" alt="Trabajo Patricia Mayo" />
         </div>
       </div>
 
-      <!-- BLOQUE 2 — invertido -->
-      <div class="detalle-bloque detalle-invertido">
-        <div class="detalle-lateral">
-          <div class="detalle-zoom">
-            <img src="/galeria4.jpg" alt="Detalle maquillaje Patricia Mayo" />
-          </div>
-          <p class="detalle-texto">
-            El detalle lo es todo.
-          </p>
+      <!-- FILA 2: Dos pequeñas izquierda, grande derecha -->
+      <div class="mosaico mosaico-invertido">
+        <div class="mosaico-pequeñas">
+          <img src="/galeria4.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria5.jpg" alt="Trabajo Patricia Mayo" />
         </div>
-        <div class="detalle-grande">
-          <img src="/galeria3.jpg" alt="Look completo Patricia Mayo" />
+        <div class="mosaico-grande">
+          <img src="/galeria6.jpg" alt="Trabajo Patricia Mayo" />
         </div>
       </div>
 
-      <!-- BLOQUE 3 -->
-      <div class="detalle-bloque">
-        <div class="detalle-grande">
-          <img src="/galeria5.jpg" alt="Look completo Patricia Mayo" />
+      <!-- FILA 3: Grande izquierda, dos pequeñas derecha -->
+      <div class="mosaico">
+        <div class="mosaico-grande">
+          <img src="/galeria7.jpg" alt="Trabajo Patricia Mayo" />
         </div>
-        <div class="detalle-lateral">
-          <div class="detalle-zoom">
-            <img src="/galeria6.jpg" alt="Detalle maquillaje Patricia Mayo" />
-          </div>
-          <p class="detalle-texto">
-            Lo que la cámara no perdona,<br />
-            Patricia lo cuida.
-          </p>
+        <div class="mosaico-pequeñas">
+          <img src="/galeria8.jpg" alt="Trabajo Patricia Mayo" />
+          <img src="/galeria9.jpg" alt="Trabajo Patricia Mayo" />
         </div>
       </div>
 
@@ -642,79 +629,53 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     opacity: 0.9;
   }
 
-  /* GALERÍA FOTO GRANDE + DETALLE EN ZOOM */
+  /* SECCIÓN GALERÍA MOSAICO */
   .galeria-seccion {
     background-color: #0D0D0D;
-    padding: 5rem 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 0.4rem;
   }
 
-  /* BLOQUE FOTO GRANDE + DETALLE */
-  .detalle-bloque {
+  /* MOSAICO */
+  .mosaico {
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 0;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.4rem;
     width: 100%;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
   }
 
-  .detalle-invertido {
-    grid-template-columns: 2fr 3fr;
+  .mosaico-invertido {
+    grid-template-columns: 1fr 2fr;
   }
 
-  /* FOTO GRANDE */
-  .detalle-grande img {
+  .mosaico-grande img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
   }
 
-  /* LATERAL CON ZOOM Y TEXTO */
-  .detalle-lateral {
+  .mosaico-pequeñas {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 3rem;
-    align-items: center;
+    gap: 0.4rem;
   }
 
-  /* ZOOM */
-  .detalle-zoom {
+  .mosaico-pequeñas img {
     width: 100%;
-    max-width: 320px;
-    border: 1px solid rgba(242, 239, 232, 0.15);
-  }
-
-  .detalle-zoom img {
-    width: 100%;
+    flex: 1;
     object-fit: cover;
     display: block;
     aspect-ratio: 1/1;
   }
 
-  /* TEXTO */
-  .detalle-texto {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-style: italic;
-    color: #F2EFE8;
-    text-align: center;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.85;
-  }
-
   /* INSTAGRAM */
   .galeria-instagram {
     text-align: center;
-    padding: 2rem 2rem 0 2rem;
+    padding: 3rem 2rem;
   }
 
   .galeria-instagram a {
@@ -952,27 +913,18 @@ const description = "Maquilladora profesional en Gijón y Asturias. Especializad
     }
   }
 
-  /* MÓVIL FOTO GRANDE + DETALLE */
+  /* MÓVIL MOSAICO */
   @media (max-width: 768px) {
-    .detalle-bloque {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .mosaico {
+      grid-template-columns: 1fr 1fr;
     }
 
-    .detalle-invertido {
-      grid-template-columns: 1fr;
+    .mosaico-invertido {
+      grid-template-columns: 1fr 1fr;
     }
 
-    .detalle-invertido .detalle-lateral {
-      order: -1;
-    }
-
-    .detalle-lateral {
-      padding: 1.5rem;
-    }
-
-    .galeria-seccion {
-      gap: 4rem;
+    .mosaico-grande img {
+      aspect-ratio: 1/1;
     }
   }
 </style>
