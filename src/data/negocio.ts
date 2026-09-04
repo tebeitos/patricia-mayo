@@ -28,4 +28,9 @@ export const servicios = [
     titulo: "Maquillaje artístico y transformación",
     descripcion: "Personajes, Halloween, efectos especiales, looks de editorial que no tienen límite. Si tienes una idea en la cabeza (aunque no sepas si es posible), probablemente sí lo es. Y lo confieso: estos trabajos son mis preferidos."
   },
+  {
+    numero: "05",
+    titulo: "Aprende a maquillarte tú",
+    descripcion: "Clases personalizadas de automaquillaje para aprender las técnicas que mejor funcionan con tu cara, tu tono de piel y tu estilo. Aprenderás a preparar la piel, a encontrar tu base perfecta, a dominar el delineado que siempre se te tuerce y a crear un look de día y otro de noche con los mismos productos.\n\nUna sola sesión puede cambiarte la rutina de los próximos años."
+  }
 ];
