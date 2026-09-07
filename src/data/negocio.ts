@@ -26,7 +26,7 @@ export const servicios = [
   {
     numero: "04",
     titulo: "Maquillaje artístico y transformación",
-    descripcion: "Personajes, Halloween, efectos especiales, looks de editorial que no tienen límite. Si tienes una idea en la cabeza (aunque no sepas si es posible), probablemente sí lo es. Y lo confieso: estos trabajos son mis preferidos."
+    descripcion: "Personajes, Halloween, efectos especiales, looks de editorial que no tienen límite. Si tienes una idea en la cabeza (aunque no sepas si es posible), probablemente sí lo es. Y lo confieso: estos trabajos son de mis preferidos."
   },
   {
     numero: "05",
