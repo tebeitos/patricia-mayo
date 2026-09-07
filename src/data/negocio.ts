@@ -11,7 +11,7 @@ export const servicios = [
   {
     numero: "01",
     titulo: "Shootings, marcas y pasarela",
-    descripcion: "Ha trabajado para marcas como Siroko, en sesiones fotográficas y pases de moda. El maquillaje que la cámara, el foco y el fotógrafo exigen es completamente distinto al de todos los días."
+    descripcion: "He trabajado en sesiones fotográficas para marcas como Siroko, en videoclips y pases de moda. El maquillaje que la cámara, el foco y el fotógrafo exigen es completamente distinto al de todos los días."
   },
   {
     numero: "02",
