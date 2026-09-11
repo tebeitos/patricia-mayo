@@ -2,6 +2,7 @@ export const negocio = {
   nombre: "Patricia Mayo",
   profesion: "Makeup Artist",
   ciudad: "Gijón · Asturias",
+  email: "beautylifees@gmail.com",
   instagram: "https://www.instagram.com/makeuppatti",
   whatsapp: "34691352577",
   whatsappTexto: "Hola Patricia, me gustaría reservar una cita contigo.",
